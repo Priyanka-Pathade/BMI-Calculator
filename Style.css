@@ -8,7 +8,8 @@
 body{
     min-height: 100vh;
     /* background-image: url(./assets/bg.jpg); */
-    background-color: rgb(238, 231, 238);
+    /* background-color: rgb(238, 231, 238); */
+    background-image: linear-gradient(120deg,#ff6b6b,#5f27cd);
     background-size: cover;
     font-family: 'Nunito', sans-serif;
 }
@@ -24,6 +25,7 @@ body{
     border-radius: 35px;
     text-align: center;
     position: relative;
+    
 }
 .box::before{
     content: '';
@@ -37,27 +39,42 @@ body{
     border-radius: 50px;
     z-index: -1;
 }
+h4{color: #FAFAFA;}
 h1{
     font-weight: bold;
-    font-size: 36px;
-    padding: 30px 0;
+    font-size: 30px;
+    padding: 30px 0 10px 0;
+    margin: 10px 10px;
 }
 .content{
     padding: 0 40px;
 }
 .input{
-    background: #fff;
-    box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15);
-    border-radius: 28px;
-    padding: 20px 0;
+    /* display: flex; */
+    /* background: #fff; */
+    /* box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); */
+    border-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    background-color: #1c1c1c;
+    border-radius: 50%;
+    cursor: pointer;
 }
 .input label{
     display: block;
     font-size: 18px;
     font-weight: 600;
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .input input{
     outline: none;
@@ -67,41 +84,39 @@ h1{
     text-align: center;
     font-size: 18px;
     font-family: 'Nunito', sans-serif;
-
-}
-button#calculate{
-    font-family: 'Nunito', sans-serif;
-    color: #fff;
-    background-color: #4f7df9;
-    border-radius: 12px;
-    font-size: 16px;
-    width: 150px;
-    padding: 12px 0;
-    outline:none;
-    border: none;
-    transition: background .2s ease;   /*  need to check */
-}
-button#calculate:hover{
-    background-color: #0044ff;
 }
 
-.result p {
-    font-size: 22px;
-    font-weight: 600;
-    color: #000;
-    margin-bottom: 15px;
+.main{
+    font-weight: bold;
+    font-size: 30px;
+    padding: 30px 0 10px 0;
+    margin: 0 10px;
+    text-align: center;
 }
-.result #result{
-    font-size: 36px;
-    font-weight: 900;
-    color: #4f7df9;
-    background-color: #eaeaea;
-    display: inline-block;
-    padding: 7px 20px;
-    border-radius: 30px;
-    margin-bottom: 25px;
+.display{
+    box-shadow: 0 0 20px rgba(0,139,253,0.25);
+    width: 200px;
+    background: #fff;
+    /* box-shadow: 0px 0px 95px -30px rgba(0, 0, 0, 0.15); */
+    border-radius: 20px;
+    padding: 5px 0;
+    margin: 5% 0; 
+    position: relative;
+    left: 26%;
+    right: 25%;
+  } 
+.display #result{
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #0be881;
 }
-#comment{
-    color: #4f7df9;
-    font-weight: 800;
+#result #comment{
+    /* color: #4f7df9;
+    font-weight: 800; */
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+
 }
